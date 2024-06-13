@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from main.views import blank_view
+from main.views import home, processor
 
 urlpatterns = [
-    # path('admin/', admin.site.urls), path('', include('pcppclone.urls'))
-    path('', blank_view, name='blank')
+    path('admin/', admin.site.urls),
+    path('', home, name='home'),
+    path('processor/', processor, name='processor'),
 ]

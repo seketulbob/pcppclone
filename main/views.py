@@ -1,9 +1,11 @@
+import logging
 from django.shortcuts import render
-from .models import Product
+from .builder import display
 
-# def home(request):
-#     products = Product.objects.all()
-#     return render(request, 'home.html', {'products': products})
 
-def blank_view(request):
+def home(request):
     return render(request, 'home.html')
+
+def processor(request):
+    cpus = display()
+    return render(request, 'processor.html', {'cpus': cpus})
