@@ -10,5 +10,5 @@
             <li>{{ product.name }} - {{ product.price }} - <a href="{{ product.url }}">View</a> - Source: {{ product.source }}</li>
         {% endfor %}
     </ul>
+    <button onclick="window.location.href='{% url 'processor' %}'">Processor</button>
 </body>
-</html>

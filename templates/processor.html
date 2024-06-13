@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CPU List</title>
+</head>
+<body>
+    <h1>CPU List</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Core</th>
+            <th>Socket</th>
+            <th>PCC</th>
+            <th>PCBC</th>
+            <th>IG</th>
+            <th>Price</th>
+        </tr>
+        {% for cpu in cpus %}
+        <tr>
+            <td>{{ cpu.name }}</td>
+            <td>{{ cpu.core }}</td>
+            <td>{{ cpu.socket }}</td>
+            <td>{{ cpu.PCC }}</td>
+            <td>{{ cpu.PCBC }}</td>
+            <td>{{ cpu.IG }}</td>
+            <td>{{ cpu.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
