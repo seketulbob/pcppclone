@@ -8,3 +8,15 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+class CPU(models.Model):
+    name = models.CharField(max_length=255)  # Can contain letters and numbers
+    core = models.IntegerField()  # Core counts
+    socket = models.CharField(max_length=255)
+    PCC = models.CharField(max_length=255)  # Performance Core Clock
+    PCBC = models.CharField(max_length=255, null=True, blank=True)  # Performance Core Boost CLock
+    IG = models.CharField(max_length=255, null=True, blank=True)  # Integrated Graphics
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return self.name
