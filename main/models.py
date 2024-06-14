@@ -34,3 +34,55 @@ class GraphicCard(models.Model):
 
     def __str__(self):
         return self.name
+
+class Motherboard(models.Model):
+    name = models.CharField(max_length=255)
+    socket = models.CharField(max_length=50)
+    form_factor = models.CharField(max_length=50)
+    memory_slots = models.IntegerField(null=True, blank=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return self.name
+
+class Memory(models.Model):
+    name = models.CharField(max_length=255)
+    speed = models.CharField(max_length=50)
+    modules = models.CharField(max_length=50)
+    cas_latency = models.CharField(max_length=50, null=True, blank=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return self.name
+
+class Storage(models.Model):
+    name = models.CharField(max_length=255)
+    capacity = models.CharField(max_length=50)
+    type = models.CharField(max_length=50, null=True, blank=True)
+    form_factor = models.CharField(max_length=50, null=True, blank=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return self.name
+
+class Case(models.Model):
+    name = models.CharField(max_length=255)
+    type = models.CharField(max_length=50)
+    side_panel = models.CharField(max_length=50, null=True, blank=True)
+    color = models.CharField(max_length=50, null=True, blank=True)
+    external_volume = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return self.name
+
+class PowerSupply(models.Model):
+    name = models.CharField(max_length=255)
+    type = models.CharField(max_length=50)
+    modular = models.CharField(max_length=50)
+    efficiency_rating = models.CharField(max_length=50)
+    wattage = models.IntegerField()
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return self.name
