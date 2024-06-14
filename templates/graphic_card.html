@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graphic Cards</title>
+</head>
+<body>
+    <h1>Graphic Cards</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Chipset</th>
+                <th>Memory</th>
+                <th>Core Clock</th>
+                <th>Boost Clock</th>
+                <th>Length</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for card in graphic_cards %}
+                <tr>
+                    <td>{{ card.name }}</td>
+                    <td>{{ card.chipset }}</td>
+                    <td>{{ card.memory }}</td>
+                    <td>{{ card.core_clock }}</td>
+                    <td>{{ card.boost_clock }}</td>
+                    <td>{{ card.length }}</td>
+                    <td>{{ card.price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
