@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memories</title>
+</head>
+<body>
+    <h1>Memories</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Speed</th>
+                <th>Modules</th>
+                <th>CAS Latency</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for memory in memories %}
+                <tr>
+                    <td>{{ memory.name }}</td>
+                    <td>{{ memory.speed }}</td>
+                    <td>{{ memory.modules }}</td>
+                    <td>{{ memory.cas_latency }}</td>
+                    <td>{{ memory.price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

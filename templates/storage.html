@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Storages</title>
+</head>
+<body>
+    <h1>Storages</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Capacity</th>
+                <th>Type</th>
+                <th>Form Factor</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for storage in storages %}
+                <tr>
+                    <td>{{ storage.name }}</td>
+                    <td>{{ storage.capacity }}</td>
+                    <td>{{ storage.type }}</td>
+                    <td>{{ storage.form_factor }}</td>
+                    <td>{{ storage.price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

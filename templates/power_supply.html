@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Power Supplies</title>
+</head>
+<body>
+    <h1>Power Supplies</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Modular</th>
+                <th>Efficiency Rating</th>
+                <th>Wattage</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for power_supply in power_supplies %}
+                <tr>
+                    <td>{{ power_supply.name }}</td>
+                    <td>{{ power_supply.type }}</td>
+                    <td>{{ power_supply.modular }}</td>
+                    <td>{{ power_supply.efficiency_rating }}</td>
+                    <td>{{ power_supply.wattage }}</td>
+                    <td>{{ power_supply.price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

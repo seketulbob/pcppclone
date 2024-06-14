@@ -10,6 +10,11 @@
             <li>{{ product.name }} - {{ product.price }} - <a href="{{ product.url }}">View</a> - Source: {{ product.source }}</li>
         {% endfor %}
     </ul>
-    <button onclick="window.location.href='{% url 'processor' %}'">Processor</button>
-    <button onclick="window.location.href='{% url 'graphic_card' %}'">Graphic Card</button>
+        <a href="{% url 'processor' %}"><button>Processor</button></a>
+        <a href="{% url 'graphic_card' %}"><button>Graphic Cards</button></a>
+        <a href="{% url 'motherboards' %}"><button>Motherboards</button></a>
+        <a href="{% url 'memories' %}"><button>Memories</button></a>
+        <a href="{% url 'storages' %}"><button>Storages</button></a>
+        <a href="{% url 'cases' %}"><button>Cases</button></a>
+        <a href="{% url 'power_supplies' %}"><button>Power Supplies</button></a>
 </body>

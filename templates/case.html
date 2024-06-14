@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cases</title>
+</head>
+<body>
+    <h1>Cases</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Side Panel</th>
+                <th>Color</th>
+                <th>External Volume</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for case in cases %}
+                <tr>
+                    <td>{{ case.name }}</td>
+                    <td>{{ case.type }}</td>
+                    <td>{{ case.side_panel }}</td>
+                    <td>{{ case.color }}</td>
+                    <td>{{ case.external_volume }}</td>
+                    <td>{{ case.price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
